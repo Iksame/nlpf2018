@@ -41,8 +41,7 @@ class LaplazePlayer extends Player
         // How can i display the result of each round ? $this->prettyDisplay()
         // -------------------------------------    -----------------------------------------------------
 
-        $choice = parent::scissorsChoice();
-
-        return $choice;
+      
+        return parent::scissorsChoice();
     }
 };

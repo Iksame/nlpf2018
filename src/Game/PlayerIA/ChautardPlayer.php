@@ -40,9 +40,35 @@ class ChautardPlayer extends Player
         // -------------------------------------    -----------------------------------------------------
         // How can i display the result of each round ? $this->prettyDisplay()
         // -------------------------------------    -----------------------------------------------------
+        $nb = $this->result->getNbRound();
+        
+        if ($nb % 10 == 0)
+            return parent::rockChoice();
 
-        $choice = parent::scissorsChoice();
+        if ($nb % 9 == 0)
+            return parent::rockChoice();
+        
+        if ($nb % 8 == 0)
+            return parent::scissorsChoice();
 
-        return $choice;
+        if ($nb % 7 == 0)
+            return parent::scissorsChoice();
+        
+        if ($nb % 6 == 0)
+            return parent::paperChoice();
+        
+        if ($nb % 5 == 0)
+            return parent::rockChoice();
+        
+        if ($nb % 4 == 0)
+            return parent::paperChoice();
+        
+        if ($nb % 3 == 0)
+            return parent::rockChoice();
+        
+        if ($nb % 2 == 0)
+            return parent::scissorsChoice();
+
+        return parent::scissorsChoice();
     }
 };
