@@ -41,8 +41,13 @@ class TabouPlayer extends Player
         // How can i display the result of each round ? $this->prettyDisplay()
         // -------------------------------------    -----------------------------------------------------
 
-        $choice = parent::scissorsChoice();
-
-        return $choice;
+        $r = rand(0, 2);
+        
+                if ($r == 1)
+                    return parent::rockChoice();
+                if ($r == 2)
+                    return parent::scissorsChoice();
+                
+                return parent::paperChoice();
     }
 };

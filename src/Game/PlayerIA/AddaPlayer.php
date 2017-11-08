@@ -41,8 +41,13 @@ class AddaPlayer extends Player
         // How can i display the result of each round ? $this->prettyDisplay()
         // -------------------------------------    -----------------------------------------------------
 
-        $choice = parent::scissorsChoice();
+        $r = rand(0, 2);
 
-        return $choice;
+        if ($r == 1)
+            return parent::rockChoice();
+        if ($r == 2)
+            return parent::scissorsChoice();
+        
+        return parent::paperChoice();
     }
 };

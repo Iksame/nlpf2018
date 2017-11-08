@@ -42,6 +42,13 @@ class LaplazePlayer extends Player
         // -------------------------------------    -----------------------------------------------------
 
       
-        return parent::scissorsChoice();
+        $r = rand(0, 2);
+        
+                if ($r == 1)
+                    return parent::rockChoice();
+                if ($r == 2)
+                    return parent::scissorsChoice();
+                
+                return parent::paperChoice();
     }
 };
