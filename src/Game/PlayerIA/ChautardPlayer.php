@@ -50,18 +50,12 @@ class ChautardPlayer extends Player
             }
             else
             {
-                if ($last_choice == "scissors")
-                {
+            if ($last_pap > $last_roc && $last_pap > $last_sci)
                     return parent::scissorsChoice();
-                }
-                if ($last_choice == "paper")
-                {
-                    return parent::paperChoice();
-                }
-                else
-                {
+                if ($last_sci > $last_roc && $last_sci > $last_pap)
                     return parent::rockChoice();
-                }
+
+                return parent::paperChoice();
             }
         }
         else
